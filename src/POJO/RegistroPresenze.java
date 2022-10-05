@@ -23,7 +23,7 @@ public class RegistroPresenze {
             try {
                 String fileContent = FileUtils.readFileToString( maledettoFile, encoding );
 
-                this.presenze += fileContent;
+                this.presenze = fileContent;
 
             } catch( IOException e ) {
                 System.out.println( "Error" );
@@ -31,7 +31,7 @@ public class RegistroPresenze {
 
         } else {
             try { // Nel caso in cui non esiste il file, viene creato automaticamente
-                FileUtils.writeStringToFile( maledettoFile, " ", encoding );
+                FileUtils.writeStringToFile( maledettoFile, "REGISTRO PRESENZE\n", encoding );
             } catch( IOException e ) {
                 throw new RuntimeException( e );
             }

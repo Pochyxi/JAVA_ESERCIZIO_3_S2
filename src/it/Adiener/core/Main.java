@@ -13,7 +13,7 @@ public class Main {
 
         do {
             System.out.println( "Ecco l'elenco delle presenze");
-            System.out.println(registro.getPresenze());
+            System.out.println( registro.getPresenze() );
 
             System.out.println( "Aggiungi una presenza" );
 
